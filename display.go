@@ -6,7 +6,7 @@ import (
 	"os"
 )
 
-func display() {
+func display() error {
 	// READING A FILE LINE BY LINE
 	file, err := os.Open("tasklist.txt")
 	if err != nil {
@@ -14,10 +14,12 @@ func display() {
 	}
 	defer file.Close()
 	scanner := bufio.NewScanner(file)
+	fmt.Println("")
 	fmt.Println("		YOUR LIST OF TASKS:")
 	i := 1
 	for scanner.Scan() {
 		fmt.Printf("	#%d: "+scanner.Text()+"\n", i)
 		i++
 	}
+	return nil
 }

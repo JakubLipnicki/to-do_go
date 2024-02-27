@@ -1,5 +1,8 @@
 package main
 
-func remove() {
+import "fmt"
 
+func remove() error {
+	fmt.Println("remove test")
+	return nil
 }

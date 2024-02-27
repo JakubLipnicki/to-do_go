@@ -1,5 +1,8 @@
 package main
 
-func add() {
+import "fmt"
 
+func add() error {
+	fmt.Println("add test")
+	return nil
 }
