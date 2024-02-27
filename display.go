@@ -12,7 +12,6 @@ func display() error {
 	if err != nil {
 		panic(err)
 	}
-	defer file.Close()
 	scanner := bufio.NewScanner(file)
 	fmt.Println("")
 	fmt.Println("		YOUR LIST OF TASKS:")
@@ -21,5 +20,6 @@ func display() error {
 		fmt.Printf("	#%d: "+scanner.Text()+"\n", i)
 		i++
 	}
+	file.Close()
 	return nil
 }
