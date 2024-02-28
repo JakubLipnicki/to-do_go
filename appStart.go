@@ -58,5 +58,9 @@ func getCommands() map[string]commandCli {
 			name:     "display",
 			callback: display,
 		},
+		"clear": {
+			name:     "clear",
+			callback: clearFile,
+		},
 	}
 }
