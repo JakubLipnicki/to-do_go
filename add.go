@@ -21,7 +21,7 @@ func add() error {
 			continue
 		} else {
 			task := string(scanner.Text())
-			_, err := file.WriteString("\n" + task)
+			_, err := file.WriteString(task + "\n")
 			// _, err := file.Write([]byte(scanner.Text()))
 			if err != nil {
 				panic(err)
