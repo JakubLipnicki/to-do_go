@@ -14,6 +14,7 @@ func appStart() {
 	fmt.Println("	 add: for adding new task")
 	fmt.Println("	 remove: for deleting a task")
 	fmt.Println("	 display: for displaying your current tasks")
+	fmt.Println("	 clear: clearing current list")
 	display()
 	for {
 		scanner := bufio.NewScanner(os.Stdin)
