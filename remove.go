@@ -45,5 +45,7 @@ func remove() error {
 		}
 		i++
 	}
+	clearFile()
+	overWrite()
 	return nil
 }
