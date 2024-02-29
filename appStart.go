@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"strings"
 )
 
 func appStart() {
@@ -24,7 +25,8 @@ func appStart() {
 			continue
 		}
 		commandName := scanner.Text()
-		command, ok := getCommands()[commandName]
+		trimmed := strings.TrimSpace(commandName)
+		command, ok := getCommands()[trimmed]
 		if ok {
 			err := command.callback()
 			if err != nil {
